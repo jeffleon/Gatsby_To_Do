@@ -4,3 +4,15 @@
     font-family: 'Secular One', sans-serif;
     color: whitesmoke;
 }
+.icones{
+    float: right;
+}
+
+@media(max-width: 768px)
+{
+    .button-form{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+

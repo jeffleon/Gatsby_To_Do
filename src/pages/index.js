@@ -5,10 +5,10 @@ import './styles/index.css'
 
 const Home = () =>{
   return (
-    <div className="content">
-      <Form_/>
-      <Tasks/>
-    </div>
+      <div className="content row">
+        <Form_/>
+        <Tasks/>
+      </div>
   )
 }
 

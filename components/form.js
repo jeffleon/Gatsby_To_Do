@@ -17,22 +17,23 @@ const Formulario = (props) => {
                 lng = position.coords.longitude;
                 lat = position.coords.latitude;
                 if (input.length > 0) { props.addFunction({"data": input, "lat": lat, "lng": lng})}
+                input = await "";
             }); 
         }
-        
+        e.target.reset();
     }
     return (
-        <div className="container mt-4">
+        <div className="container">
             <h1 className="title">List of task</h1>
-            <Form onSubmit={handleSub}>
+            <Form onSubmit={handleSub} className="form">
                 <Row form>
-                    <Col md={6}>
+                    <Col md={10} sm={12}>
                         <FormGroup>
                             <Input onChange={handle} type="text" name="task" id="task" placeholder="task to do" />
                         </FormGroup>
                     </Col>
-                    <Col md={2}>
-                        <Button color="success" type="submit">
+                    <Col md={2} sm={12}>
+                        <Button color="success" className="button-form" type="submit">
                             +
                         </Button>
                     </Col>

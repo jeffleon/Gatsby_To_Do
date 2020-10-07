@@ -15,9 +15,11 @@ const Tasks = (props) => {
             <div className="container">
                 <Alert className="alert" color={element.done?"danger":"success"} id={index}>
                     {element.data}
-                    <Link to="/map" state={{"lat": element.lat, "lng": element.lng}}><i className="fa fa-map-marker m-1" aria-hidden="true"></i></Link>
-                    <i onClick={() => props.doneFunction(element.id)} className={element.done?"fa fa-minus-circle m-1":"fa fa-plus-circle  m-1"} id={index} aria-hidden="true"></i>
-                    <i onClick={() => props.deleteFunction(element.id)} className="fa fa-trash m-1" id={index} aria-hidden="true"></i>
+                    <div className="icones">
+                        <Link to="/map" state={{"lat": element.lat, "lng": element.lng}}><i className="fa fa-map-marker m-1" aria-hidden="true"></i></Link>
+                        <i onClick={() => props.doneFunction(element.id)} className={element.done?"fa fa-minus-circle m-1":"fa fa-plus-circle  m-1"} id={index} aria-hidden="true"></i>
+                        <i onClick={() => props.deleteFunction(element.id)} className="fa fa-trash m-1" id={index} aria-hidden="true"></i>
+                    </div>
                 </Alert>
             </div>
         )
